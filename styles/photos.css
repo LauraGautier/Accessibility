@@ -1,0 +1,68 @@
+.title {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.title p {
+    display: none;
+}
+
+h2 {
+    color: #fff
+}
+
+h1 {
+    color: #333
+}
+
+/* Styles pour les écrans de largeur minimale de 768px */
+@media screen and (min-width: 768px) {
+    .title p {
+        display: block;
+        font-size: 1em;
+        font-weight: 400;
+        color: #181818;
+        margin: 0;
+    }
+}
+
+/* Styles pour le mode sombre */
+@media (prefers-color-scheme: dark) {
+    h2 {
+        color: #fff;
+    }
+
+    h1 {
+        color: #fff;
+    }
+
+    .title p {
+        color: white;
+    }
+}
+
+/* Styles pour les utilisateurs préférant un contraste plus élevé */
+@media (prefers-contrast: more) {
+    h1 {
+        color: black;
+    }
+
+    h2 {
+        color: black;
+    }
+}
+
+/* Styles pour le mode sombre avec contraste élevé */
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+    h1 {
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    body {
+        background-color: black;
+    }
+}

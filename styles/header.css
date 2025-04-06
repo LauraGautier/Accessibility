@@ -1,0 +1,108 @@
+header {
+    width: 100%;
+    background-color: #003366;
+}
+
+nav {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: #003366;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    padding: 1em 0;
+}
+
+nav > .burger-menu-container {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 0;
+}
+
+nav .burger-menu-bar {
+    width: 2.5em;
+    height: 0.4em;
+    background-color: #003366;
+    margin: 0.4em 0;
+    border-radius: 5px;
+}
+
+/* Menu principal (par défaut en mobile) */
+nav > .full-menu {
+    display: none;
+    min-width: 100%;
+    flex-direction: column;
+    background-color: #003366;
+    justify-content: start;
+    align-items: start;
+    padding: 0.5em 0;
+}
+
+nav > .full-menu > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: #003366;
+}
+
+nav > .full-menu > ul > li {
+    margin: 0;
+}
+
+nav > .full-menu a {
+    color: #fff;
+    line-height: 2.2em;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+/* Effet sur le lien actif */
+.full-menu a.active {
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    text-decoration-thickness: 0.3em;
+    text-underline-offset: 0.2em;
+}
+
+@media only screen and (min-width: 768px) {
+    nav > .burger-menu-container {
+        display: none;
+    }
+
+    nav > .full-menu {
+        display: flex;
+        background-color: #003366;
+    }
+
+    nav > .full-menu > ul {
+        display: flex;
+        flex-direction: row;
+        background-color: #003366;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li {
+        padding: 0 15px;
+    }
+
+    nav > .full-menu a {
+        color: #fff;
+        font-size: 1.2em;
+        text-decoration: none;
+    }
+
+    .full-menu a.active {
+        text-decoration: underline;
+        text-decoration-color: #fff;
+        text-decoration-thickness: 0.1em;
+        text-underline-offset: 0.2em;
+    }
+}

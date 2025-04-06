@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Portfolio de Gribouille</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; block-all-mixed-content; upgrade-insecure-requests;" />
+  <meta name="language" content="french" />
+  <meta name="description" content="Page d'accueil du portfolio de Gribouille le chat européen." />
+  <meta name="author" content="Laura GAUTIER" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Gribouille, chat, chat français, photos de chat, portfolio de chat, chat européen, chat mâle" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/header.css" />
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Menu principal">
+      <div class="burger-menu-container" aria-label="Menu mobile" role="button" tabindex="0">
+        <span class="burger-menu-bar" aria-hidden="true"></span>
+        <span class="burger-menu-bar" aria-hidden="true"></span>
+        <span class="burger-menu-bar" aria-hidden="true"></span>
+      </div>
+      <div class="full-menu">
+        <ul>
+          <li><a href="./index.html" class="active">Accueil</a></li>
+          <li><a href="./photos.html">Mes photos</a></li>
+          <li><a href="./histoire.html">Mon histoire</a></li>
+          <li><a href="./contact.html">Contactez-moi</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about">
+      <header>
+        <img src="/images/assis_tapis.png"
+             class="profile-picture"
+             alt="Gribouille assis sur un tapis, entouré de ses jouets."
+             width="200"
+             height="200" />
+        <hgroup>
+          <h1>Gribouille | La Fripouille</h1>
+          <p><strong>Chat européen</strong> vivant en <strong><a href="https://fr.wikipedia.org/wiki/%C3%8Ele-de-France">Île-de-France</a></strong></p>
+        </hgroup>
+      </header>
+      <div class="description">
+        <p>Découvrez le monde feutré et malicieux de Gribouille, un chat européen de 8 ans au pelage doux comme un nuage et au regard rempli de sagesse (et parfois de bêtises).</p>
+        <p>Ce portfolio est une ode à sa vie tranquille mais pleine de caractère, entre siestes stratégiquement placées au soleil, moments de jeu endiablés, et regards royaux depuis son poste d’observation préféré.</p>
+        <p>À travers des photos soigneusement sélectionnées et quelques anecdotes touchantes, suivez son histoire, du petit chaton curieux qu’il était à l’adulte serein et un brin espiègle qu’il est devenu.</p>
+      </div>
+    </section>
+
+    <section class="photos" aria-labelledby="section-photos">
+      <h2 id="section-photos">Dernières photos</h2>
+
+      <article class="photo">
+        <header>
+          <img src="/images/arbre_sieste.png" alt="Gribouille en train de dormir sur son arbre à chat." width="150" height="150" />
+          <h3>La sieste</h3>
+        </header>
+        <div>
+          <p>Parmi ses nombreux royaumes, l’arbre à chat trône en maître. Perché sur la plateforme la plus haute, Gribouille s’y installe comme un souverain contemplant son domaine.</p>
+          <p>C’est là qu’il savoure ses plus longues siestes, enroulé comme une brioche chaude, les moustaches frémissant au rythme de ses rêves félins.</p>
+          <p>Rien ne peut troubler son sommeil sacré – sauf peut-être le doux bruit d’un sachet de croquettes qu’on ouvre.</p>
+        </div>
+      </article>
+
+      <article class="photo">
+        <header>
+          <img src="/images/cache_sachet.png" alt="Gribouille caché dans un sac plastique, seules ses oreilles dépassent." width="150" height="150" />
+          <h3>La cachette</h3>
+        </header>
+        <div>
+          <p>Gribouille a une passion secrète : les cachettes improbables. Un carton vide ? C’est son nouveau studio. Une couverture pliée ? Un abri cinq étoiles.</p>
+          <p>Mais son coup de cœur absolu reste le sac plastique, ce sanctuaire froissé qui semble murmurer des promesses d’aventure. Il s’y glisse avec la discrétion d’un ninja en mission.</p>
+          <p>Invisible mais fier, il observe le monde depuis son cocon crissant, persuadé que personne ne l’a vu… alors qu’il est au milieu du salon.</p>
+        </div>
+      </article>
+
+      <article class="photo">
+        <header>
+          <img src="/images/cadeau_noel.png" alt="Gribouille assis parmi les cadeaux de Noël de ses petits frères humains." width="150" height="150" />
+          <h3>Les cadeaux</h3>
+        </header>
+        <div>
+          <p>Quand viennent les anniversaires ou les fêtes, Gribouille entre en scène tel un expert en inspection de cadeaux. Peu importe à qui ils sont destinés — surtout quand ce sont ceux de ses petits frères Marcel et Anatole — il considère que tout paquet est d’abord à lui.</p>
+          <p>Papier brillant, rubans qui frétillent, boîtes mystérieuses… tout l’attire. Il s’installe au milieu des cadeaux avec un air solennel, comme s’il supervisait la distribution officielle.</p>
+          <p>Et si un petit jouet traîne un peu trop longtemps sans surveillance, ne soyez pas surpris de le retrouver discrètement planqué sous une armoire ou dans une de ses fameuses cachettes…</p>
+        </div>
+      </article>
+
+      <a href="./photos.html" class="button">Voir toutes mes photos</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Laura GAUTIER - 2025</p>
+  </footer>
+
+  <script src="./js/menu.js" defer></script>
+</body>
+</html>

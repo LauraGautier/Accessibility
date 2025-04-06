@@ -1,0 +1,391 @@
+/* Global Settings */
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: #333;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Ajout du contraste sur la photo de profil */
+.profile-picture {
+    border-radius: 50%;
+}
+
+/* Section about */
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2em 0;
+}
+
+.about header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ajout d'un fond plus contrasté pour le header */
+.about header > img {
+    background: white;
+    padding: 0.3em;
+}
+
+/* Amélioration du contraste des textes */
+.about hgroup {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.about hgroup > p {
+    font-size: 1em;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+}
+
+/* Accessibilité des liens */
+.about hgroup > p a {
+    color: #fff;
+    text-decoration: none;
+    text-underline-offset: 0.2em;
+}
+
+.about .description {
+    color: #fff;
+    background-color: #003366;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    padding: 1em;
+    text-align: justify;
+    margin: 1.8em 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Section photo */
+h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    padding: 0 1em;
+}
+
+/* Photos et sections liées */
+.photo {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px #fff dashed;
+    border-right-width: 0;
+    border-left-width: 0;
+    margin: 1em 0;
+    padding: 1em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Changement de couleur de survol */
+.photo:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.photo p {
+    display: none;
+}
+
+.photo header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo h3 {
+    font-size: 1.2em;
+    line-height: 2em;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.photo header a {
+    text-decoration: dotted underline;
+    text-underline-offset: 0.2em;
+    text-decoration-color: #fff;
+}
+
+/* Amélioration de la visibilité des boutons */
+a.button {
+    display: block;
+    padding: 1em 1em;
+    margin: 1em 1em;
+    background-color: #003366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border-color: white;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Footer avec couleurs adaptées */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 0 1em;
+    margin-top: 2em;
+}
+
+/* BREAKPOINT TABLETTE */
+@media only screen and (min-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main > * {
+        width: 90vw;
+    }
+
+    .about .description {
+        border-radius: 0.5em;
+    }
+
+    .photo {
+        border-right-width: 1px;
+        border-left-width: 1px;
+        border-radius: 0.5em;
+    }
+
+    .photo p {
+        display: flex;
+        line-height: 1.25em;
+        text-align: justify;
+    }
+}
+
+/* Styles de tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #fff;
+    font-weight: bold;
+}
+
+caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+td[colspan="2"] {
+    text-align: center;
+}
+
+/* Styles de tableau pour le mode sombre */
+@media (prefers-color-scheme: dark) {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: #1f1f1f; /* Fond sombre pour le tableau */
+        color: white; /* Texte blanc pour une meilleure visibilité */
+    }
+
+    th, td {
+        border: 1px solid #444; /* Bordure claire mais discrète pour le mode sombre */
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #333; /* Fond sombre pour les en-têtes */
+        font-weight: bold;
+    }
+
+    caption {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #ddd; /* Légèrement plus clair pour les légendes */
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #ddd; /* Légèrement plus clair pour les légendes */
+    }
+
+    td[colspan="2"] {
+        text-align: center;
+        background-color: #444; /* Fond gris foncé pour les cellules avec colspan */
+    }
+}
+
+
+/* BREAKPOINT ECRAN LARGE */
+@media screen and (min-width: 1024px) {
+    main > * {
+        width: 90vw;
+    }
+
+    .about {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: stretch;
+        margin: 4em;
+        gap: 4em;
+    }
+
+    .about header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: min-content;
+    }
+
+    .about hgroup {
+        margin: 1.2em 0;
+    }
+
+    .about hgroup > h1 {
+        line-height: 1.5em;
+    }
+
+    .about hgroup > p {
+        font-size: 1.2em;
+    }
+
+    .about > p {
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3em;
+    }
+
+    h2 {
+        padding: 0;
+    }
+
+    .photo {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 2em;
+        margin: 2em 0;
+        padding: 2em;
+    }
+
+    .photo header {
+        display: flex;
+        flex-shrink: 1;
+        flex-grow: 1;
+        max-width: 25%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .photo div {
+        flex-grow: 3;
+    }
+}
+
+/* Mode haut contraste */
+@media (prefers-contrast: more) {
+    .about hgroup h1 {
+        color: black;
+    }
+
+    .about hgroup p {
+        color: black;
+    }
+
+    .about > p {
+        color: black;
+        background-color: #fff;
+        padding: 1em;
+        text-align: justify;
+        margin: 1.8em 0;
+    }
+
+    h2 {
+        color: black;
+    }
+
+    .about hgroup > p a {
+        color: black;
+    }
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+    html,
+    body {
+        background: #333;
+    }
+
+    .photo {
+        background-color: #333;
+        color: white;
+    }
+
+    .photo header a {
+        text-decoration-color: white;
+    }
+
+    .photo h3 {
+        color: white;
+    }
+}
+
+/* Mode sombre avec contraste élevé */
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+    .about hgroup h1 {
+        color: white;
+    }
+
+    .about hgroup p {
+        color: white;
+    }
+
+    .about > p {
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    .about hgroup > p a {
+        color: white;
+    }
+}

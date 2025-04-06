@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio de Gribouille</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Sécurité -->
+    <meta http-equiv="Content-Security-Policy"
+      content="script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; block-all-mixed-content; upgrade-insecure-requests;" />
+    
+    <!-- SEO -->
+    <meta name="language" content="fr" />
+    <meta name="description" content="Page remplie de photos de Gribouille le chat." />
+    <meta name="author" content="Laura GAUTIER" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="chat, portfolio, Gribouille, photographie, chat, photos" />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/photos.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav aria-label="Menu principal">
+        <div class="burger-menu-container" role="button" tabindex="0" aria-label="Ouvrir le menu principal" aria-expanded="false" aria-controls="menu">
+          <div class="burger-menu-bar"></div>
+          <div class="burger-menu-bar"></div>
+          <div class="burger-menu-bar"></div>
+        </div>
+        <div class="full-menu" id="menu">
+          <ul>
+            <li><a href="./">Accueil</a></li>
+            <li><a href="./photos.html" class="active" aria-current="page">Mes photos</a></li>
+            <li><a href="./histoire.html">Mon histoire</a></li>
+            <li><a href="./contact.html">Contactez-moi</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <hgroup class="title">
+        <h1 style="text-align: center">Mes photos</h1>
+        <p>Quelques photos de moi prises par ma maman Laura.</p>
+      </hgroup>
+
+      <article class="photo">
+        <header>
+          <img src="/images/arbre_sieste.png"
+            alt="Gribouille dormant paisiblement dans son arbre à chat, en hauteur."
+            height="150"
+            width="150" />
+          <h2>La sieste</h2>
+        </header>
+        <div>
+          <p>
+            Parmi ses nombreux royaumes, l’arbre à chat trône en maître. Perché sur la plateforme la plus haute, Gribouille s’y installe comme un souverain contemplant son domaine.
+          </p>
+          <p>
+            C’est là qu’il savoure ses plus longues siestes, enroulé comme une brioche chaude, les moustaches frémissant au rythme de ses rêves félins.
+          </p>
+          <p>
+            Rien ne peut troubler son sommeil sacré – sauf peut-être le doux bruit d’un sachet de croquettes qu’on ouvre en bas.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo">
+        <header>
+          <img src="/images/cache_sachet.png"
+            alt="Gribouille caché dans un sachet plastique transparent, seul le bout de son oreille dépasse."
+            height="150"
+            width="150" />
+          <h2>La cachette</h2>
+        </header>
+        <div>
+          <p>
+            Gribouille a une passion secrète : les cachettes improbables. Un carton vide ? C’est son nouveau studio. Une couverture pliée ? Un abri cinq étoiles.
+          </p>
+          <p>
+            Mais son coup de cœur absolu reste le sac plastique, ce sanctuaire froissé qui semble murmurer des promesses d’aventure. Il s’y glisse avec la discrétion d’un ninja en mission.
+          </p>
+          <p>
+            Invisible mais fier, il observe le monde depuis son cocon crissant, persuadé que personne ne l’a vu… alors qu’il est au milieu du salon.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo">
+        <header>
+          <img src="/images/cadeau_noel.png"
+            alt="Gribouille assis derrière des cadeaux de Noël colorés, l'air curieux et fier."
+            height="150"
+            width="150" />
+          <h2>Les cadeaux</h2>
+        </header>
+        <div>
+          <p>
+            Quand viennent les anniversaires ou les fêtes, Gribouille entre en scène tel un expert en inspection de cadeaux. Peu importe à qui ils sont destinés — surtout quand ce sont ceux de ses cousins — il considère que tout paquet est d’abord à lui.
+          </p>
+          <p>
+            Papier brillant, rubans qui frétillent, boîtes mystérieuses… tout l’attire. Il s’installe au milieu des cadeaux avec un air solennel.
+          </p>
+          <p>
+            Et si un petit jouet traîne un peu trop longtemps sans surveillance, ne soyez pas surpris de le retrouver planqué sous une armoire.
+          </p>
+        </div>
+      </article>
+
+      <article class="photo">
+        <header>
+          <img src="/images/coucou_fenetre.png"
+            alt="Gribouille assis sur le rebord de la fenêtre de la cuisine, regardant sa maman dehors qui prend la photo."
+            height="150"
+            width="150" />
+          <h2>L'extérieur</h2>
+        </header>
+        <div>
+          <p>
+            L’extérieur, c’est le grand spectacle quotidien de Gribouille. Installé dignement sur le rebord de la fenêtre, il observe le monde avec la patience d’un vieux sage.
+          </p>
+          <p>
+            Chaque oiseau qui passe, chaque feuille qui tombe, chaque humain un peu trop pressé... tout est sujet à analyse.
+          </p>
+          <p>
+            Et même s’il ne met pas souvent les pattes dehors, ce petit poste d’observation reste son lien sacré avec la vie au-delà de la maison.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <p>© Laura GAUTIER - 2025</p>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

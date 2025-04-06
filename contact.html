@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Portfolio de Gribouille</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; block-all-mixed-content; upgrade-insecure-requests;" />
+    <meta name="language" content="french" />
+    <meta name="description" content="Cette page vous permet de contacter la maitresse de Gribouille le chat." />
+    <meta name="author" content="Laura GAUTIER" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="Gribouille, portfolio, contact, message" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="burger-menu-container">
+                <div class="burger-menu-bar"></div>
+                <div class="burger-menu-bar"></div>
+                <div class="burger-menu-bar"></div>
+            </div>
+            <div class="full-menu">
+                <ul>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./photos.html">Projets</a></li>
+                    <li><a href="./histoire.html">Mon histoire</a></li>
+                    <li><a href="./contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="contactFormHeading">Contactez ma maitresse via ce formulaire</h1>
+    
+        <form id="contactForm" action="/submit-contact" method="POST" aria-labelledby="contactFormHeading">
+            <div class="user-informations">
+                <label for="name">Nom</label>
+                <input class="input-field" type="text" name="name" id="name" placeholder="Votre nom" required aria-required="true" aria-describedby="nameHelp">
+                <small id="nameHelp">Entrez votre nom complet.</small>
+    
+                <label for="email">E-mail</label>
+                <input class="input-field" type="email" name="email" id="email" placeholder="Votre e-mail" required aria-required="true" aria-describedby="emailHelp">
+                <small id="emailHelp">Nous utiliserons votre e-mail pour vous répondre.</small>
+    
+                <label for="phone">Téléphone</label>
+                <input class="input-field" type="tel" name="phone" id="phone" placeholder="Votre numéro de téléphone" required aria-required="true" aria-describedby="phoneHelp">
+                <small id="phoneHelp">Entrez un numéro valide au format international.</small>
+    
+                <label for="subject">Sujet</label>
+                <select name="subject" id="subject" required aria-required="true" aria-describedby="subjectHelp">
+                    <option value="">Choisissez un sujet</option>
+                    <option value="demande_informations">Demande d'informations</option>
+                    <option value="commentaires">Commentaires</option>
+                    <option value="autre">Autre</option>
+                </select>
+                <small id="subjectHelp">Sélectionnez le sujet qui correspond à votre message.</small>
+    
+                <label for="newsletter">
+                    <input type="checkbox" name="newsletter" id="newsletter" aria-describedby="newsletterHelp"> 
+                    Je souhaite recevoir la newsletter
+                </label>
+                <small id="newsletterHelp">Cochez cette case si vous voulez recevoir des informations par e-mail.</small>
+            </div>
+    
+            <fieldset>
+                <legend>Comment avez-vous connu Gribouille ?</legend>
+                <label>
+                    <input type="radio" name="decouverte" value="Facebook" required aria-required="true" aria-describedby="choiceHelp"> Facebook
+                </label><br>
+                <label>
+                    <input type="radio" name="decouverte" value="Instagram" aria-describedby="choiceHelp"> Instagram
+                </label><br>
+                <label>
+                    <input type="radio" name="decouverte" value="Google" aria-describedby="choiceHelp"> Google
+                </label>
+            </fieldset>
+    
+            <label for="message">Message</label>
+            <textarea name="message" id="message" placeholder="Tapez votre message ici" required aria-required="true" aria-describedby="messageHelp"></textarea>
+            <small id="messageHelp">Détaillez votre message ici. Plus vous êtes précis, plus la réponse sera rapide.</small>
+    
+            <button type="submit">Envoyer votre message</button>
+        </form>
+    </main>
+    
+
+    <footer>
+        <p>© Laura GAUTIER - 2025</p>
+    </footer>
+    <script src="./js/menu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Validation logic
+                var name = document.getElementById('name').value.trim();
+                var email = document.getElementById('email').value.trim();
+                var message = document.getElementById('message').value.trim();
+                
+                if (name === '' || email === '' || message === '') {
+                    alert('Please fill in all fields.');
+                } else {
+                    alert('Message sent successfully!');
+                    document.getElementById('contactForm').reset();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
